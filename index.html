@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Brilliana Mutiara Mentari</title>
+    <link rel="icon" type="image/svg+xml" href="icon.svg" />
+    <style>
+        :root {
+            --bg: #0d0d0d;
+            --card: #111111;
+            --border: #1f1f1f;
+            --text: #e5e5e5;
+            --muted: #9ca3af;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 650px;
+            padding: 3rem 1rem 6rem;
+        }
+
+        .profile {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .profile-left {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            background: #1a1a1a;
+        }
+
+        h1,
+        h2 {
+            font-weight: 500;
+        }
+
+        .small {
+            font-size: 14px;
+        }
+
+        .muted {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .socials {
+            display: flex;
+            gap: 15px;
+        }
+
+        .socials a {
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .socials a:hover {
+            color: white;
+        }
+
+        .bio {
+            margin-top: 1.5rem;
+            font-size: 14px;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        .section {
+            margin-top: 2rem;
+        }
+
+        ul {
+            margin-top: .5rem;
+            padding-left: 18px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .grid {
+            margin-top: 1rem;
+            display: grid;
+            gap: 12px;
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 16px;
+            border-radius: 10px;
+            transition: 0.3s ease;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            border-color: #2d2d2d;
+            transform: translateY(-2px);
+        }
+
+        .card-title {
+            font-size: 14px;
+            margin-bottom: 6px;
+        }
+
+        .card-desc {
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        @media (min-width: 640px) {
+            .grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            grid-auto-rows: 150px;
+            gap: 8px;
+            margin-top: 1rem;
+        }
+
+        .portfolio-item {
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-item img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Variations for Instagram-style collage */
+        .portfolio-item.large {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .portfolio-item.tall {
+            grid-row: span 2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Profile -->
+        <div class="profile">
+            <div class="profile-left">
+                <div class="avatar">BM</div>
+                <div>
+                    <h2 class="small">Brilliana Mutiara Mentari</h2>
+                    <div class="muted">Graphic Designer</div>
+                </div>
+            </div>
+
+            <div class="socials">
+                <a href="https://id.linkedin.com/in/brilliana-mutiara-mentari" target="_blank">LinkedIn</a>
+                <a href="mailto:brillianamentari@gmail.com" target="_blank">Email</a>
+            </div>
+
+        </div>
+
+        <!-- Bio -->
+        <div class="bio">
+            Multimedia Engineering Technology student with a strong focus on graphic design and video editing.
+            Experienced in handling both individual and team projects using a brief-based and audience-oriented
+            approach.
+        </div>
+
+        <!-- About -->
+        <div class="section">
+            <h2 class="small">About Me:</h2>
+            <ul>
+                <li>Based in Batam, Indonesia | Available for Remote Work & Relocation</li>
+                <li>Open to Internship, Freelance, and Entry-Level Multimedia Roles</li>
+                <li>Detail-Oriented, Deadline-Driven</li>
+            </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="section">
+            <h2 class="small">What I Do:</h2>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <div class="card-title">🎨 Graphic Design</div>
+                <div class="card-desc">
+                    Logo, poster, and social media design with strong and consistent visual identity.
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">🎬 Video Editing</div>
+                <div class="card-desc">
+                    Editing promotional and social media content with engaging storytelling.
+                </div>
+            </div>
+        </div>
+
+        <!-- Portfolio -->
+        <div class="section">
+            <h2 class="small">Portfolio:</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item large">
+                    <img src="https://www.siliconera.com/wp-content/uploads/2024/12/new-yotsuba-manga-volume-16-finally-debuts-in-2025.png?fit=1200%2C675" alt="Project 1">
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://www.siliconera.com/wp-content/uploads/2024/12/new-yotsuba-manga-volume-16-finally-debuts-in-2025.png?fit=1200%2C675" alt="Project 2">
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://www.siliconera.com/wp-content/uploads/2024/12/new-yotsuba-manga-volume-16-finally-debuts-in-2025.png?fit=1200%2C675" alt="Project 3">
+                </div>
+                <div class="portfolio-item tall">
+                    <img src="https://www.siliconera.com/wp-content/uploads/2024/12/new-yotsuba-manga-volume-16-finally-debuts-in-2025.png?fit=1200%2C675" alt="Project 4">
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://www.siliconera.com/wp-content/uploads/2024/12/new-yotsuba-manga-volume-16-finally-debuts-in-2025.png?fit=1200%2C675" alt="Project 5">
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://www.siliconera.com/wp-content/uploads/2024/12/new-yotsuba-manga-volume-16-finally-debuts-in-2025.png?fit=1200%2C675" alt="Project 6">
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
